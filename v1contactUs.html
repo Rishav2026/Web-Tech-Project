@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/v1contactUs.css">
+</head>
+<body>
+    <ul>
+        <li id="Brewed">
+            <a href="v1home.html"><strong>Brewed</strong></a>
+        </li>
+    <li>
+        <a href="v1Recipes.html">Recipes</a>
+    </li>
+    <li>
+        <a href="v1contactUs.html">Contact Us</a>
+    </li>
+    <li>
+        <a href="v1aboutUS.html">About Us</a>
+    </li>
+    <li>
+        <a href="v1buyNow.html">Buy Now</a>
+    </li>
+    <li>
+        <a href="v1Tea101.html">Tea 101</a>
+    </li>
+    <li>
+        <a href="sitemap.html">Site Map</a>
+    </li>
+
+    
+
+    </ul>
+    <h1>Customer Feedback</h1>
+    <form method="post" action="https://oim-apis.herokuapp.com/form">
+        <fieldset>
+            <legend><strong>Your Information</strong></legend>
+            <div>
+                <label for="name">Name: </label>
+                <input
+                  id="name"
+                  maxlength="100"
+                  name="name"
+                  placeholder="Enter your name"
+                  type="text"
+                />
+              </div>
+              <div>
+                <label for="email">Email: </label>
+                <input
+                  id="email"
+                  maxlength="100"
+                  name="email"
+                  placeholder="Email address"
+                  size="26"
+                  type="email"
+                />
+              </div>
+    </fieldset>
+    <fieldset>
+        <legend><strong>Your Review</strong></legend>
+        <div>
+            <label for="purchase">Which refreshment did you purchase?</label>
+            <select id="purchase" name="purchase">
+              <option value="AirPods Pro">Classic Chai</option>
+              <option value="AirPods with wireless charging case">Peach and Lime</option>
+              <option value="AirPods with charging case">Mojito</option>
+            </select>
+          </div>
+        <div>
+            What do you think of this product? 
+            <br>
+            <label>Great<input name="review" type="radio" value="Great" /></label>
+            <label>Awesome<input name="review" type="radio" value="Awesome" /></label>
+            <label>Good<input name="review" type="radio" value="Good" /></label>
+          </div>
+          <div>
+            <div>
+              <label for="comments">Comments</label>
+            </div>
+            <div>
+              <textarea
+                cols="25"
+                id="comments"
+                name="comments"
+                rows="5"
+              ></textarea>
+            </div>
+          </div>
+          <label 
+          >Sign me up for email updates 
+          <input type="checkbox"
+          class="onoffswitch-checkbox"
+          checked
+          id="inline"/>
+          </label>
+      </div>
+      <br>
+      <button type="submit">
+          Submit
+      </button>
+      <button type="reset">
+          Reset
+      </button>
+              </fieldset>
+              </form>
+</body>
+</html>
