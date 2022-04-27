@@ -1,3 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+.game{
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    margin: auto;
+}
+#character{
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position:relative;
+    top: 150px;
+}
+.animate{
+    animation: jump 0.3s linear;
+}
+@keyframes jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+
+#block{
+    background-color: blue;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 130px;
+    left: 500px;
+    animation: block 1s infinite linear;
+}
+@keyframes block{
+    0%{left: 500px}
+    100%{left: -20px}
+}
+p{
+    text-align: center;
+}
 li{
     float: left;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -55,28 +99,5 @@ a:hover {
         height: auto;
     }
     body{
-        background-color: white;
-        color: rgb(14, 109, 51);
-    }
-    tr,
-td{
-    border: 1px pink;
-    padding: 3px;
-    vertical-align: middle;
-}
-h1{
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-table{
-    border: 2px solid rgb(238, 158, 171);
-    margin-right:auto;
-    margin-left: auto;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border-collapse: collapse;
-    background-color: linear-gradient(#51a9ee,#147bcd);
-    text-align: center;
-    width: 1000px;
-    font-size: 1pc;
-}
-
+        background-color:rgb(14, 109, 51); ;
+        color: white;}

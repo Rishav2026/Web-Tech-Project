@@ -1,5 +1,6 @@
 body{
-    background-color: #8CDBA9;
+    background-color: white;
+    color: black;
 }
 form{
     width: 80%;
@@ -13,6 +14,7 @@ fieldset{
 }
 h1{
     text-align: center;
+    color: green;
 }
 li{
     float: left;

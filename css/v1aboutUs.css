@@ -1,9 +1,17 @@
 body{
-    background-color: #06441c;
+    background-color: white;
+    color: black;
+
 }
-h1,h2,p
+h1{
+    color: green;
+}
+h2{
+    color: rgb(48, 67, 48);
+}
+p
 {
-color: rgb(188, 235, 190);
+color: black;
 }
 li{
     float: left;

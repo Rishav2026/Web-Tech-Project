@@ -28,44 +28,63 @@
         <a href="v1Tea101.html">Tea 101</a>
     </li>
     <li>
+        <a href="game.html">Bored? Play a Game</a>
+    </li>
+    <li>
         <a href="sitemap.html">Site Map</a>
     </li>
 
-
     </ul>
-    <table>
-        <tr>
-            <th width="15%"><b>Classic Chai</b></th>
-            <td width="30%">
-                <img src="chai.jpeg" height="300" width="300">
-            </td>
-            <td width="30%">A perfect mixture of the classic chai. Combining the sweet taste of apple and cinnamon with the tanginess of clove</td>
-            <td width="10%">INR 40</td>
-            <td width="10%">
-                <a href="v1buyNow.html">Add to Cart</a>
-            </td>
-        </tr>
-        <tbody>
-            <tr>
-                <th rowspan="2" scope="rogroup" width="15%">Fun Take on the old flavours</th>
-                <td rowspan="2" width="30%">
-                    <img src="chai.jpeg" height="300" width="300"/>
-                </td>
-                <td scope="row" width="30%">Peach and Lime</td>
-                <td width="10%">INR 40</td>
-                <td width="10%">
-                    <a href="v1buyNow.html">Add to Cart</a>
-                </td>
-            </tr>
-            <tr>
-                <td width="30%" scope="rowgroup">Mojito</td>
-                <td width="10%"><strike>INR 50</strike> <br> INR 40</td>
-                <td width="10%">
-                    <a href="v1buyNow.html">Add to Cart</a>
-                </td>
-            </tr>
-        </tbody>
+    <style>
+        h1 {
+          text-align: center;
+        }
+        img {
+          border: 10px ridge white;
+          display: block;
+        }
+        div, img{
+          width: 500px;
+          margin: 30px auto;
+        }
+        p{
+            text-align: center;
+        }
+
+      </style>
+    </head>
+    <body>
+      <h1>Favorite Iced Tea</h1>
+      <img src="" alt="Click here to choose the Iced-Tea you want" title="" />
+      <p><a id="link" href="v1buyNow.html">Buy now</a></p>
+  
+      
+      <script>
+
+        function cc()  {
+          console.log("...starting...");
+          let icedTea = window.prompt("Enter the name of your favorite iced tea in all capital letters: For example: CLASSIC CHAI, PEACH AND LIME, MOJITO");
+          // const messageEl = document.getElementById("message");
+          const imageEl = document.querySelector("img")
+  
+          if (icedTea == "CLASSIC CHAI"){
+            imageEl.src = "cranberry-tea.webp"
+          }
+          else if(icedTea == "MOJITO"){
+            imageEl.src = "raspberryChamomileGin.webp"
+          }
+          else if(icedTea == "PEACH AND LIME"){
+            imageEl.src = "CranberryTeaLemonade.webp"
+          }
+        }
+        document.querySelector("img").onclick = function(){
+          cc();
+        }
+
         
-    </table>
+
+
+  
+      </script>
 </body>
 </html>
