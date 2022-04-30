@@ -110,7 +110,17 @@
               </form>
 
               <script>
-                
+                function validation() {
+            console.log('...starting validation function...');
+            const name = document.getElementById("name");
+            const comments = document.getElementById("comments")
+            if(name != String){
+              document.getElementById("name").innerText = ("Please enter alphabets");
+            }
+          }
+          document.querySelector("body").onload = function(){
+            validation();
+          }
               </script>
 </body>
 </html>

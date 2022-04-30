@@ -1,42 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>JavaScript form validation - checking all letters</title>
-<link rel='stylesheet' href='form-style.css' type='text/css' />
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>ex16-2 - Temperature Converter</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        form {
+            font-family: Arial;
+            font-weight: bold;
+            padding: 10px;
+            width: 70%;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: Silver;
+        }
+
+        h1 {
+            font-family: Arial;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        div {
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 20px;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        input[type="button"] {
+            margin-right: 30px;
+        }
+
+    </style>
 </head>
-<body onload='document.form1.text1.focus()'>
-<div class="mail">
-<h2>Enter your Name and Submit</h2>
-<form name="form1" action="#">
-<ul>
-<li>Code:</li>
-<li><input type='text' name='text1'/></li>
-<li class="rq">*Enter alphabets only.</li>
-<li>&nbsp;</li>
-<li><input type="submit" name="submit" value="Submit" onclick="allLetter(document.form1.text1)" /></li>
-<li>&nbsp;</li>
-</ul>
-</form>
-</div>
+
+<body>
+    <h1>Celsius Fahrenheit Converter</h1>
+    <form action="" id="form1" method="post">
+        <div id="d1">
+            <label>Celsius:
+                <input name="cel" size="6" type="text" id="cel" />
+            </label>
+            <label>Fahrenheit:
+                <input name="far" size="6" type="text" id="far" />
+            </label>
+        </div>
+        <div>
+            <input name="submit" type="button" value="Convert" id="convert-btn" />
+            <input name="reset" type="reset" value="Clear" />
+        </div>
+    </form>
+    <script>
+        function convert() {
+            console.log('...starting convert function...');
+            const celInput = document.getElementById("cel");
+            console.log(celInput.value);
+
+            const farInput = document.getElementById("far");
+
+            /*
+            1. if both inputs are empty, show a message
+            2. else if (cel is not empty - we don't care about far)
+               2.1 if cel is not numeric, show a message
+               2.2 else, convert from cel to far
+            3. else - cel is emtpy and far is not empty
+               3.1 if far is not numeric, show a message
+               3.2 else, convert from far to cel
+            */
+        }
+
+        document.getElementById("convert-btn").onclick = function () {
+            convert();
+        }
+
+    </script>
 </body>
 
-<script>
-    function allLetter(inputtxt)
-      { 
-      var letters = /^[A-Za-z]+$/;
-      if(inputtxt.value.match(letters))
-      {
-      alert('Your name have accepted : you can try another');
-      return true;
-      }
-      else
-      {
-      alert('Please input alphabet characters only');
-      return false;
-      }
-      }
-      
-</script>
 </html>
