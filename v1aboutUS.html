@@ -43,5 +43,30 @@
     <h2>Why we Started</h2>
     <p>Imagine you are going out, in India, on a scorching summer day, you are dehydrated, sluggish, and looking for something refreshing, instead you find a hyper-sweetened and stale tasting bottle of chemicals that gets passed off as iced tea thanks to the 0.1% black tea extract they put inside of it. Despite India being one of the largest tea producing countries in the world, many Indians face the issue of inaccessibility to quality iced tea made from authentic tea leaves. Most tea blends available in the market combine high quality Assam tea with inferior commercial tea leaves which ruins the overall flavor and quality of the tea consumers consume. At Brewed our goal is to reinvent the iced tea into a low-calorie drink with a range of new flavors never seen before using pure and exotic Assam tea leaves. </p>
 
+
+
+    <img src="" alt="icedTea">
+    <script>
+        const slides = [
+            "HerbalTea.webp",
+            "HerbalTea1.webp",
+            "HerbalTea3.webp",
+            "HerbalTea4.webp",
+        ]
+        let i = 0;
+        function slideshow (){
+            if (i == slides.length){
+                i = 0;
+            }
+            document.querySelector("img").src = slides[i];
+            i++;
+            setTimeout(slideshow, 1000);
+
+        }
+        document.querySelector("body").onload = function(){
+            slideshow();
+        };
+
+    </script>
 </body>
 </html>
